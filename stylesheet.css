@@ -76,7 +76,7 @@ body {
     scale: 70%;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 990px) {
     .nav-menu {
         z-index: 9999;
         position: fixed;
@@ -84,7 +84,7 @@ body {
         top: 5rem;
         flex-direction: column;
         background-color: #fff;
-        width: 100%;
+        width: auto;
         border-radius: 10px;
         text-align: center;
         transition: 0.3s;
@@ -224,7 +224,7 @@ body {
     width: 80%;
     color: #fff;
     background-color: #1DA8CD;
-    border-radius: 8rem;
+    border-radius: 6rem;
     margin-left: 20%;
     margin-top: 5%;
     padding: 6%;
@@ -279,7 +279,7 @@ text-align: right;
 
 
 .service_card {
-    width: 190px;
+    width: 250px;
     height: 354px;
     border-radius: 20px;
     background: #f5f5f5;
@@ -335,3 +335,85 @@ text-align: right;
     opacity: 1;
    }
 /* section3 */
+
+
+/* section4 */
+.sec4{
+    width: 100%;
+    height: auto;
+    background-color: #ffffff;
+    text-align: center;
+    padding-bottom: 5%;
+}
+
+.sec4 h3{
+    color: #1DA8CD;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-top: 4%
+}
+.sec4 h4{
+    color: #000000;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-top: 4%;
+    padding-bottom: 4%;
+
+}
+
+
+.service_cards{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card_holder{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+
+.service_cards4 {
+    width: 350px;
+    height: 354px;
+    border-radius: 20px;
+    background: #f5f5f5;
+    position: relative;
+    padding: 1.8rem;
+    border: 2px solid #c3c6ce;
+    transition: 0.5s ease-out;
+    overflow: visible;
+   }
+   
+   .card-details {
+    color: black;
+    height: 100%;
+    gap: .5em;
+    display: grid;
+    justify-items: center;
+    place-content: center;
+   }
+   
+   .text-bodys4 {
+    color: rgb(0, 0, 0);
+   }
+   
+   /*Text*/
+   .text-titles4 {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #1DA8CD;
+   }
+   
+   /*Hover*/
+   .service_cards4:hover {
+    border-color: #008bf8;
+    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+   }
+   
+
+/* section4 */

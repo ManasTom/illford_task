@@ -194,6 +194,7 @@ body {
     font-weight: bold;
     margin-left: 20%;
 }
+
 .sec2 h1 {
     text-align: left;
     padding-top: 10px;
@@ -219,7 +220,7 @@ body {
 
 }
 
-.ceo_message{
+.ceo_message {
     height: auto;
     width: 80%;
     color: #fff;
@@ -230,16 +231,17 @@ body {
     padding: 6%;
 }
 
-.ceo_message h3{
-font-family: "hurricane";
-font-weight: bold;
-text-align: right;
+.ceo_message h3 {
+    font-family: "hurricane";
+    font-weight: bold;
+    text-align: right;
 }
+
 /* section2 */
 
 
 /* section3 */
-.sec3{
+.sec3 {
     width: 100%;
     height: auto;
     background-color: #1A2529;
@@ -247,13 +249,14 @@ text-align: right;
     padding-bottom: 5%;
 }
 
-.sec3 h3{
+.sec3 h3 {
     color: #1DA8CD;
     margin-left: 10%;
     margin-right: 10%;
     padding-top: 4%
 }
-.sec3 h4{
+
+.sec3 h4 {
     color: #ffff;
     margin-left: 10%;
     margin-right: 10%;
@@ -263,14 +266,14 @@ text-align: right;
 }
 
 
-.service_cards{
+.service_cards {
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.card_holder{
+.card_holder {
     display: flex;
     justify-content: center;
     text-align: center;
@@ -288,17 +291,17 @@ text-align: right;
     border: 2px solid #c3c6ce;
     transition: 0.5s ease-out;
     overflow: visible;
-   }
-   
-   .card-details {
+}
+
+.card-details {
     color: black;
     height: 100%;
     gap: .5em;
     display: grid;
     place-content: center;
-   }
-   
-   .card-button {
+}
+
+.card-button {
     transform: translate(-50%, 125%);
     width: 60%;
     border-radius: 1rem;
@@ -312,33 +315,34 @@ text-align: right;
     bottom: 0;
     opacity: 0;
     transition: 0.3s ease-out;
-   }
-   
-   .text-body {
+}
+
+.text-body {
     color: rgb(134, 134, 134);
-   }
-   
-   /*Text*/
-   .text-title {
+}
+
+/*Text*/
+.text-title {
     font-size: 1.5em;
     font-weight: bold;
-   }
-   
-   /*Hover*/
-   .service_card:hover {
+}
+
+/*Hover*/
+.service_card:hover {
     border-color: #008bf8;
     box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
-   }
-   
-   .service_card:hover .card-button {
+}
+
+.service_card:hover .card-button {
     transform: translate(-50%, 50%);
     opacity: 1;
-   }
+}
+
 /* section3 */
 
 
 /* section4 */
-.sec4{
+.sec4 {
     width: 100%;
     height: auto;
     background-color: #ffffff;
@@ -346,13 +350,14 @@ text-align: right;
     padding-bottom: 5%;
 }
 
-.sec4 h3{
+.sec4 h3 {
     color: #1DA8CD;
     margin-left: 10%;
     margin-right: 10%;
     padding-top: 4%
 }
-.sec4 h4{
+
+.sec4 h4 {
     color: #000000;
     margin-left: 10%;
     margin-right: 10%;
@@ -362,14 +367,14 @@ text-align: right;
 }
 
 
-.service_cards{
+.service_cards {
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.card_holder{
+.card_holder {
     display: flex;
     justify-content: center;
     text-align: center;
@@ -387,33 +392,122 @@ text-align: right;
     border: 2px solid #c3c6ce;
     transition: 0.5s ease-out;
     overflow: visible;
-   }
-   
-   .card-details {
+}
+
+.card-details {
     color: black;
     height: 100%;
     gap: .5em;
     display: grid;
     justify-items: center;
     place-content: center;
-   }
-   
-   .text-bodys4 {
+}
+
+.text-bodys4 {
     color: rgb(0, 0, 0);
-   }
-   
-   /*Text*/
-   .text-titles4 {
+}
+
+/*Text*/
+.text-titles4 {
     font-size: 1.5em;
     font-weight: bold;
     color: #1DA8CD;
-   }
-   
-   /*Hover*/
-   .service_cards4:hover {
+}
+
+/*Hover*/
+.service_cards4:hover {
     border-color: #008bf8;
     box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
-   }
-   
+}
 
+
+.faq_holder{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center
+}
+
+
+.faq-button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background-color: #fff;
+    background-image: linear-gradient(147deg, #fff 0%, #008bf8 74%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.151);
+    position: relative;
+  }
+  .faq-button svg {
+    height: 1.5em;
+    fill: white;
+  }
+  .faq-button:hover svg {
+    animation: jello-vertical 0.7s both;
+  }
+  @keyframes jello-vertical {
+    0% {
+      transform: scale3d(1, 1, 1);
+    }
+    30% {
+      transform: scale3d(0.75, 1.25, 1);
+    }
+    40% {
+      transform: scale3d(1.25, 0.75, 1);
+    }
+    50% {
+      transform: scale3d(0.85, 1.15, 1);
+    }
+    65% {
+      transform: scale3d(1.05, 0.95, 1);
+    }
+    75% {
+      transform: scale3d(0.95, 1.05, 1);
+    }
+    100% {
+      transform: scale3d(1, 1, 1);
+    }
+  }
+  
+  .tooltip {
+    position: absolute;
+    top: -20px;
+    opacity: 0;
+    background-color: #fff;
+    background-image: linear-gradient(147deg, #fff 0%, #008bf8 74%);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: 0.2s;
+    pointer-events: none;
+    letter-spacing: 0.5px;
+  }
+  
+  .tooltip::before {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: #008bf8;
+    background-size: 1000%;
+    background-position: center;
+    transform: rotate(45deg);
+    bottom: -15%;
+    transition-duration: 0.3s;
+  }
+  
+  .faq-button:hover .tooltip {
+    top: -40px;
+    opacity: 1;
+    transition-duration: 0.3s;
+  }
+  
 /* section4 */

@@ -9,6 +9,50 @@
 
     <link rel="stylesheet" href="stylesheet.css">
     <title>TASK-ILLFORD</title>
+    <style>
+        /* Add your CSS styles for visually appealing display */
+        /* For simplicity, let's assume a basic table display */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            color: black;
+            font-family: "IBM Plex Sans", sans-serif;
+            text-align: center;
+            font-size: 2rem;
+            text-align: center;
+
+        }
+
+        th,
+        td {
+            border: 1px solid rgb(0, 0, 0);
+            padding: 10px;
+            text-align: left;
+            text-align: center;
+
+        }
+
+        th {
+            text-align: center;
+            font-weight: bold;
+
+        }
+
+
+        .vacanciesTable {
+            padding: 1%;
+        }
+
+
+        .careers_admin_display select {
+            color: #ffffff;
+            background-color: #ef6c00;
+            padding: 1rem;
+            font-weight: bold;
+            margin-top: 1rem;
+        }
+    </style>
 </head>
 
 <body class="body">
@@ -230,8 +274,49 @@
 
 
 
+    <!--section5-->
+    <div class="sec5 container-fluid">
+        <div class="row">
+            <div class="apply_holder col-lg-4 col-md-12">
+                <div class="service_cards5">
+                    <div class="card-details">
+                        <img src="img/scaleup.png" alt="">
+                        <p class="text-titles4">Scale up your career with us </p>
+                        <p class="text-bodys4">Being part of initiatives that challenge and push boundaries, fostering
+                            personal and professional growth.
+                        </p>
+                    </div>
+                    <button class="card-button">Apply Now</button>
+                </div>
+            </div>
+            <div class=" table_holder col-lg-8 col-md-12">
+                <div class="career_heading">
+                    Current Openings
+                </div>
+                <div class="careers_admin_display ">
+                    <select name="departmentSelect" id="departmentSelect">
+                        <option value="">All Departments</option>
+                        <option value="HR AND ADMIN">HR AND ADMIN</option>
+                        <option value="DESIGN">DESIGN</option>
+                        <option value="SUPPORT">SUPPORT</option>
+                        <option value="ENGINEERING">ENGINEERING</option>
+                        <option value="DIGITAL MARKETING">DIGITAL MARKETING</option>
+                    </select>
+                    <div id="vacanciesTable" class="vacanciesTable"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--section5-->
 
 
+
+
+
+    <script src="fireConfig.js"></script>
+    <script src="career_populator.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase.js"></script>
 
 
 

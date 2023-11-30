@@ -1,40 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Responsive Hero Section</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <style>
-    /* Custom CSS can be placed here */
-    .hero-text {
-      text-align: center;
-      padding-top: 100px;
-    }
-    .hero-img {
-      max-width: 100%;
-      height: auto;
-    }
-  </style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ILLFORD - A D M I N</title>
+
+
+    <style>
+        /* Add your CSS styles for visually appealing display */
+        /* For simplicity, let's assume a basic table display */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            color: black;
+            font-family: "IBM Plex Sans", sans-serif;
+            text-align: center;
+            font-size: 2rem;
+            text-align: center;
+
+        }
+
+        th,
+        td {
+            border: 1px solid rgb(0, 0, 0);
+            padding: 10px;
+            text-align: left;
+            text-align: center;
+
+        }
+
+        th {
+            text-align: center;
+            font-weight: bold;
+
+        }
+
+
+        .vacanciesTable {
+            padding: 1%;
+        }
+
+
+        .careers_admin_display select {
+            color: #ffffff;
+            background-color: #ef6c00;
+            padding: 1rem;
+            font-weight: bold;
+            margin-top: 1rem;
+        }
+    </style>
 </head>
+
 <body>
 
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-lg-6 col-md-12">
-      <div class="hero-text">
-        <h1>Your Hero Text Goes Here</h1>
-        <p>Some additional information or a call-to-action</p>
-      </div>
-    </div>
-    <div class="col-lg-6 col-md-12">
-      <img src="path/to/your/image.jpg" alt="Hero Image" class="hero-img">
-    </div>
-  </div>
-</div>
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+    <!-- Header -->
+
+
+    <div class="careers_admin_display">
+        <select name="departmentSelect" id="departmentSelect">
+            <option value="">All Departments</option>
+            <option value="HR AND ADMIN">HR AND ADMIN</option>
+            <option value="DESIGN">DESIGN</option>
+            <option value="SUPPORT">SUPPORT</option>
+            <option value="ENGINEERING">ENGINEERING</option>
+            <option value="DIGITAL MARKETING">DIGITAL MARKETING</option>
+        </select>
+        <div id="vacanciesTable" class="vacanciesTable"></div>
+    </div>
+
+
+
+
+
+
+
+    <!-- Scripts -->
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase.js"></script>
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyAw1iaOwMTxgmlz4MV7CYa59Ma89y2fg8E",
+            authDomain: "illfordadmin.firebaseapp.com",
+            databaseURL: "https://illfordadmin-default-rtdb.firebaseio.com",
+            projectId: "illfordadmin",
+            storageBucket: "illfordadmin.appspot.com",
+            messagingSenderId: "569304509474",
+            appId: "1:569304509474:web:6e934d68c9a731389bee7b"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+
+    </script>
+
+    <script>
+        // Reference to the vacancies in the Firebase database
+        const vacanciesRef = firebase.database().ref('vacancies');
+
+        // Listen for changes in the department dropdown
+        const departmentSelect = document.getElementById('departmentSelect');
+        departmentSelect.addEventListener('change', () => {
+            displayVacancies();
+        });
+
+        // Fetch data from Firebase and display it
+        function displayVacancies() {
+            const selectedDepartment = departmentSelect.value;
+            vacanciesRef.once('value')
+                .then(snapshot => {
+                    const data = snapshot.val();
+                    const filteredData = filterVacanciesByDepartment(data, selectedDepartment);
+                    populateTable(filteredData);
+                })
+                .catch(error => console.error('Error fetching vacancies data:', error));
+        }
+
+        // Filter vacancies based on selected department
+        function filterVacanciesByDepartment(data, department) {
+            if (department === '') {
+                return data;  // Return unfiltered data when no department is selected
+            }
+
+            const filteredData = {};
+            for (const jobId in data) {
+                if (data.hasOwnProperty(jobId) && data[jobId].job_department === department) {
+                    filteredData[jobId] = data[jobId];
+                }
+            }
+
+            return filteredData;
+        }
+
+        // Populate table with data
+        function populateTable(data) {
+            const tableDiv = document.getElementById('vacanciesTable');
+            tableDiv.innerHTML = '';  // Clear previous table
+
+            const table = document.createElement('table');
+
+            // Create table header
+            const headerRow = table.insertRow();
+            const headers = ['Job ID', 'Position', 'Department', 'Experience in years', 'Application Deadline'];
+            headers.forEach(headerText => {
+                const th = document.createElement('th');
+                th.appendChild(document.createTextNode(headerText));
+                headerRow.appendChild(th);
+            });
+
+            // Populate table rows with data
+            for (const jobId in data) {
+                if (data.hasOwnProperty(jobId)) {
+                    const job = data[jobId];
+                    const row = table.insertRow();
+                    const values = [job.job_id, job.job_position, job.job_department, job.job_experience, job.job_deadline];
+                    values.forEach(value => {
+                        const cell = row.insertCell();
+                        cell.appendChild(document.createTextNode(value));
+                    });
+                }
+            }
+
+            tableDiv.appendChild(table);
+        }
+
+        // Initial display of vacancies
+        displayVacancies();
+    </script>
+
+
 </body>
+
 </html>

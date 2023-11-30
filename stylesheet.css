@@ -854,14 +854,6 @@ textarea {
 }
 
 
-/* section6 */
-
-
-
-
-
-
-
 .contact_mapWidget_container {
     padding: 4%;
     width: 70%;
@@ -873,7 +865,6 @@ textarea {
 }
 
 .contact_mapWidget_container h5 {
-    font-weight: bold;
     color: #ffffff;
     padding-top: 2%;
 
@@ -882,3 +873,46 @@ textarea {
 .contact_mapWidget_container_text {
     width: 100%;
 }
+
+.sec6_footer{
+    width: 100%;
+    height: auto;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    text-align: center;
+    border-top: 1px solid #fff;
+}
+
+
+.sec6_footer h2 {
+    font-size: 400%;
+
+}
+
+
+.footer_links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer_links a{
+    padding-left: 5%;
+    text-decoration: none;
+    color: #fff;
+    font-size: 80%;
+}
+
+.footer_icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.social_icon{
+height: 80px;}
+/* section6 */
+
+
+
+
+
+

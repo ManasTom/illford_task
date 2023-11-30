@@ -162,14 +162,69 @@ body {
     height: 3rem;
     font-weight: bold;
     margin-top: 20%;
+    border: 0px solid black;
+    transition: background-color 0.3s ease-in-out;
+
+}.hero button:hover {
+    font-family: "IBM Plex Sans", sans-serif;
+    margin-left: 20%;
+    margin-bottom: 20%;
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 3rem;
+    width: 15rem;
+    height: 3rem;
+    font-weight: bold;
+    border: 2px solid black;
 
 }
+
 
 /* section1 */
 
 
 
 /* section2 */
+
+
+
+.heros2 h5 {
+    text-align: left;
+    padding-top: 10%;
+    font-family: "IBM Plex Sans", sans-serif;
+    color: #fff;
+    width: auto;
+    font-size: 550%;
+    font-weight: bold;
+    margin-left: 20%;
+}
+
+.heros2 button {
+    font-family: "IBM Plex Sans", sans-serif;
+    margin-left: 20%;
+    margin-bottom: 20%;
+    background-color: #000000;
+    color: #fff;
+    border-radius: 3rem;
+    width: 15rem;
+    height: 3rem;
+    font-weight: bold;
+    margin-top: 20%;
+    border: 0px solid black;
+    transition: background-color 0.3s ease-in-out;
+
+}.heros2 button:hover {
+    font-family: "IBM Plex Sans", sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 3rem;
+    width: 15rem;
+    height: 3rem;
+    font-weight: bold;
+    border: 2px solid black;
+
+}
+
 
 
 .sec2 {

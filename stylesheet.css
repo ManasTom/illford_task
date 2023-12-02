@@ -150,6 +150,14 @@ body {
     margin-left: 20%;
 }
 
+@media only screen and (max-width: 990px) {
+    .hero h5 {
+        font-size: 450%;
+        margin-left: 10%;
+    }
+}
+
+
 .hero button {
     font-family: "IBM Plex Sans", sans-serif;
     margin-left: 20%;
@@ -343,7 +351,6 @@ body {
     margin-right: 10%;
     padding-top: 4%;
     padding-bottom: 4%;
-
 }
 
 
@@ -353,6 +360,7 @@ body {
     justify-content: center;
     align-items: center;
 }
+
 
 .card_holder {
     display: flex;

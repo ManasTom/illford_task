@@ -152,7 +152,7 @@ body {
 
 @media only screen and (max-width: 990px) {
     .hero h5 {
-        font-size: 450%;
+        font-size: 350%;
         margin-left: 10%;
     }
 }
@@ -317,6 +317,10 @@ body {
         font-size: 80%;
 
     }
+
+    .ceo_message {
+        border-radius: 3rem;
+    }
 }
 
 .ceo_message h3 {
@@ -367,6 +371,13 @@ body {
     justify-content: center;
     text-align: center;
     margin-bottom: 2%;
+}
+
+@media only screen and (max-width: 990px) {
+    
+.card_holder {
+    padding-bottom: 3rem;
+}
 }
 
 
@@ -626,6 +637,11 @@ body {
     align-items: center;
     justify-content: center;
 }
+@media only screen and (max-width: 990px) {
+    .apply_holder {
+        padding-bottom: 2.5rem;
+    }
+}
 
 .table_holder {
     display: flex;
@@ -658,8 +674,9 @@ body {
 
 @media only screen and (max-width: 990px) {
     .career_heading {
-        width: 40%;
-        height: 50px;
+        width: 50%;
+        height: auto;
+        padding: 2%;
         background-color: #000000;
         color: #fff;
         font-weight: bold;

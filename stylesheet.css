@@ -44,7 +44,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-right: 10%
+    margin-right: 10%;
 }
 
 .nav-item {
@@ -1017,3 +1017,10 @@ textarea {
 }
 
 /* section6 */
+
+
+.google_element{
+    width: 100%;
+    text-align: right;
+    z-index: 99;
+}
